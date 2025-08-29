@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='%23007bff'%3EH%3C/text%3E%3C/svg%3E">
+     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='%23007bff'%3EH%3C/text%3E%3C/svg%3E">
+    
     
     <!-- CSS File -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <!-- Blend Mode Cursor -->
+    <div class="blend-cursor"></div>
 
     <!-- Header / Navbar -->
     <header class="header">
         <nav class="navbar container">
-            <a href="#" class="nav-logo">HarshYadav  |  Tech Coder</a>
+            <a href="#" class="nav-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5V35" stroke="white" stroke-width="4"/><path d="M5 20H20" stroke="white" stroke-width="4"/><path d="M20 5V35" stroke="white" stroke-width="4"/><path d="M25 20L35 5" stroke="#00DDFF" stroke-width="4"/><path d="M25 20L35 35" stroke="#00DDFF" stroke-width="4"/>
+                </svg>
+            </a>
             <ul class="nav-menu">
                 <li><a href="#hero" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -30,9 +33,7 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
@@ -42,11 +43,11 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <p class="hero-subtitle">HELLO, I'M</p>
-                    <h1 class="hero-title">Harsh</h1>
-                    <p class="hero-role">I'm a <span id="typewriter"></span></p>
+                    <h1 class="hero-title">Harsh Yadav</h1>
+                    <p class="hero-role">I am <span id="typewriter"></span></p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">My Work</a>
-                        <a href="mailto:yadavharsh913@gmail.com" class="btn btn-secondary">Hire Me</a>
+                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -61,25 +62,37 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <p class="about-text">
-                        I am a B.Tech CSE student with a passion for technology and problem-solving. I am a creative developer who focuses on building clean code and user-centric web experiences. My curiosity drives me to constantly explore new frameworks and technologies to stay updated in the ever-evolving tech world. I believe in continuous learning and enjoy transforming complex problems into elegant solutions.
-                    </p>
+                    <p>I'm a driven B.Tech Computer Science student from Ghaziabad with a passion for transforming complex problems into elegant web solutions. My focus is on the MERN stack, where I leverage my skills to build scalable, efficient, and user-centric applications. I'm always eager to learn new technologies and apply best practices to create high-performance digital experiences.</p>
                 </div>
             </div>
         </section>
-        
+
         <!-- Skills Section -->
         <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">My Skills</h2>
+                 <h2 class="section-title">My Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                    <div class="skill-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                    <div class="skill-card"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-                    <div class="skill-card"><i class="fab fa-react"></i><span>React</span></div>
-                    <div class="skill-card"><i class="fab fa-java"></i><span>Java</span></div>
-                    <div class="skill-card"><i class="fas fa-code"></i><span>C Language</span></div>
-                    <div class="skill-card"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+                    <a href="#" class="skill-link" data-skill="React" data-provider="Coursera" data-template="modern">
+                        <div class="skill-card"><i class="fab fa-react"></i><span>React</span></div>
+                    </a>
+                    <a href="#" class="skill-link" data-skill="Node.js" data-provider="Udemy" data-template="modern">
+                        <div class="skill-card"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                    </a>
+                    <a href="#" class="skill-link" data-skill="MongoDB" data-provider="MongoDB University" data-template="modern">
+                        <div class="skill-card"><i class="fas fa-database"></i><span>MongoDB</span></div>
+                    </a>
+                    <a href="#" class="skill-link" data-skill="JavaScript" data-provider="freeCodeCamp" data-template="community">
+                        <div class="skill-card"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                    </a>
+                    <a href="#" class="skill-link" data-skill="Java" data-provider="Oracle University" data-template="classic">
+                        <div class="skill-card"><i class="fab fa-java"></i><span>Java</span></div>
+                    </a>
+                    <a href="#" class="skill-link" data-skill="C Language" data-provider="NPTEL" data-template="classic">
+                        <div class="skill-card"><i class="fas fa-code"></i><span>C Language</span></div>
+                    </a>
+                    <a href="#" class="skill-link" data-skill="Git & GitHub" data-provider="GitHub Learning Lab" data-template="community">
+                        <div class="skill-card"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -87,39 +100,42 @@
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <h2 class="section-title">My Creations</h2>
                 <div class="projects-grid">
-                    <!-- Project 1 -->
                     <div class="project-card" data-tilt>
-                        <img src="https://placehold.co/400x200/28a745/FFFFFF?text=Inventory+IQ" alt="Inventory-IQ Project">
+                        <img src="./assest/Inventory.jpg" alt="Inventory-IQ Project">
                         <div class="project-info">
                             <h3>Inventory-IQ</h3>
-                            <p>A web-based Inventory Management System built with the MERN stack. It includes real-time stock tracking and billing features.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/YADAVHARSH913/Inventory-IQ" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
-                            </div>
+                            <p>Engineered a full-stack inventory management solution with real-time stock tracking and billing features.</p>
+                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/Inventory-IQ" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
                     <div class="project-card" data-tilt>
-                        <img src="https://placehold.co/400x200/007bff/FFFFFF?text=NTPC+Complaint+Portal" alt="NTPC Complaint Portal Project">
+                        <img src="./assest/NTPC.jpg" alt="NTPC Complaint Portal Project">
                         <div class="project-info">
                             <h3>NTPC Complaint Portal</h3>
-                            <p>A secure portal built using the MERN stack with an admin approval workflow and an employer login system.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/YADAVHARSH913/NTPC-Complaint-Portal" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
-                            </div>
+                            <p>Developed a secure MERN stack portal with an Admin approval workflow for efficient complaint resolution.</p>
+                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>Express</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/NTPC-Complaint-Portal" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
                         </div>
                     </div>
-                    <!-- Project 3 -->
                     <div class="project-card" data-tilt>
-                        <img src="https://placehold.co/400x200/6c757d/FFFFFF?text=AI+Healthcare+System" alt="AI Healthcare Project">
+                        <img src="./assest/AI.jpg" alt="AI Healthcare Project">
                         <div class="project-info">
                             <h3>AI-Healthcare System</h3>
-                            <p>A smart healthcare system that includes online OPD booking, real-time hospital bed management, and a patient portal.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/YADAVHARSH913/AI-Healthcare" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
-                            </div>
+                            <p>Architected a smart healthcare system for online OPD booking, real-time bed management, and patient analytics.</p>
+                             <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/AI-Healthcare" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-tilt>
+                        <img src="./assest/Portfolio.jpg" alt="Portfolio Website Project">
+                        <div class="project-info">
+                            <h3>Personal Portfolio</h3>
+                            <p>Designed and built a responsive personal portfolio using modern HTML, CSS, and JavaScript to showcase my skills.</p>
+                             <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/Portfolio-Website" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
                         </div>
                     </div>
                 </div>
@@ -129,30 +145,27 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="contact-text">My inbox is always open. Let's connect and build something amazing together!</p>
+                <h2 class="section-title">Let's Build Something Great</h2>
+                <p class="contact-text">Have a project in mind or just want to connect? My inbox is always open.</p>
                 <a href="mailto:yadavharsh913@gmail.com" class="btn btn-primary">Say Hello</a>
             </div>
         </section>
     </main>
-    
-    <!-- Custom message box for mailto link fix -->
-    <div id="message-box" class="message-box"></div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/YADAVHARSH913" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/yadavharsh913" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/_harsh_._yadav_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/YADAVHARSH913" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yadavharsh913" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/_harsh_._yadav_" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2025 | Designed & Built by Harsh Yadav</p>
+            <p>&copy; 2025 | Designed & Built with ❤️ by Harsh Yadav</p>
         </div>
     </footer>
 
     <!-- JavaScript Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

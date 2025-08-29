@@ -1,17 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Hamburger Menu Toggle
+    // --- Selective Blend Cursor ---
+    const blendCursor = document.querySelector('.blend-cursor');
+    const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-card');
+
+    window.addEventListener('mousemove', (e) => {
+        blendCursor.style.left = `${e.clientX}px`;
+        blendCursor.style.top = `${e.clientY}px`;
+    });
+
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseover', () => {
+            document.body.classList.add('cursor-active');
+            blendCursor.classList.add('active');
+        });
+        el.addEventListener('mouseout', () => {
+            document.body.classList.remove('cursor-active');
+            blendCursor.classList.remove('active');
+        });
+    });
+
+    // --- Hamburger Menu Toggle ---
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
 
-    // Typing Animation
+    // --- Typing Animation ---
     const typewriterElement = document.getElementById('typewriter');
-    const roles = ['Web Developer', 'Tech Enthusiast', 'CSE Student'];
+    const roles = ['a Web Developer.', 'a CSE Student.', 'a Tech Enthusiast.'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -19,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function type() {
         if (!typewriterElement) return;
         const currentRole = roles[roleIndex];
-        let typeSpeed = isDeleting ? 100 : 200;
+        let typeSpeed = isDeleting ? 75 : 150;
         
         typewriterElement.textContent = currentRole.substring(0, charIndex);
 
@@ -34,26 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        setTimeout(type, isDeleting && charIndex === currentRole.length ? 1500 : typeSpeed);
+        setTimeout(type, isDeleting && charIndex === currentRole.length ? 1200 : typeSpeed);
     }
     type();
 
-    // Scroll Reveal & Active Nav Link
+    // --- Scroll Reveal & Active Nav Link ---
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
-    
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.4
-    };
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.4 };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
-                // Update active nav link
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href').substring(1) === entry.target.id) {
@@ -64,52 +75,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
 
-    // Initialize Vanilla Tilt for 3D effect on project cards
+    // --- 3D Tilt Effect ---
     VanillaTilt.init(document.querySelectorAll(".project-card"), {
-        max: 15,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.5,
+        max: 15, speed: 400, glare: true, "max-glare": 0.5,
     });
 
-    // Mailto Link Fix with Custom Message
-    const emailButtons = document.querySelectorAll('a[href^="mailto:"]');
-    const messageBox = document.getElementById('message-box');
-    
-    // Function to show a custom message
-    function showMessage(message) {
-        if (messageBox) {
-            messageBox.textContent = message;
-            messageBox.classList.add('show');
-            setTimeout(() => {
-                messageBox.classList.remove('show');
-            }, 5000);
-        }
-    }
-
-    emailButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            let mailtoOpened = false;
-            
-            // A small delay to check if the browser handled the mailto link
-            const timer = setTimeout(() => {
-                if (!mailtoOpened) {
-                    event.preventDefault(); // Prevents the default action if not already handled
-                    const email = button.getAttribute('href').replace('mailto:', '');
-                    const message = `The email client could not be opened. You can copy the email address: ${email}`;
-                    showMessage(message);
-                }
-            }, 500); 
-
-            // Check if the user switches away from the tab, which often happens when a new app opens
-            window.addEventListener('blur', () => {
-                mailtoOpened = true;
-                clearTimeout(timer);
-            }, { once: true });
+    // --- Certificate Link Logic ---
+    const skillLinks = document.querySelectorAll('.skill-link');
+    skillLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const skill = link.dataset.skill;
+            const provider = link.dataset.provider;
+            const template = link.dataset.template; // Naya template parameter
+            const url = `certificate.html?skill=${encodeURIComponent(skill)}&provider=${encodeURIComponent(provider)}&template=${template}`;
+            window.open(url, '_blank');
         });
     });
 });
