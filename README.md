@@ -22,17 +22,21 @@ Welcome to my portfolio website repository! This is a single-page application bu
 Here are some screenshots of the website:
 
 ![Hero Section Screenshot]
-<img width="1899" height="987" alt="Screenshot 2025-08-29 114008" src="https://github.com/user-attachments/assets/3a49169e-2260-4da2-b93d-b880b915dabd" />
+<img width="1903" height="943" alt="image" src="https://github.com/user-attachments/assets/7f7654a3-33be-479a-8640-8a9c424cb742" />
+
 
 ![About and Skills Section Screenshot]
-<img width="1901" height="990" alt="image" src="https://github.com/user-attachments/assets/cae75b85-ce46-4ca3-8d3c-2658bd973c84" />
+<img width="1906" height="941" alt="image" src="https://github.com/user-attachments/assets/13e840eb-90ca-4b55-9cdc-d752ed7e27c8" />
+
 
 
 ![Projects Section Screenshot]
-<img width="1901" height="985" alt="image" src="https://github.com/user-attachments/assets/db69b269-8081-4476-9ed2-73c0cbf14799" />
+<img width="1906" height="944" alt="image" src="https://github.com/user-attachments/assets/2f0c62f9-a83e-4dec-af5f-86cd1e98a9c6" />
+
 
 ![Contact Section Screenshot]
-<img width="1903" height="987" alt="image" src="https://github.com/user-attachments/assets/d15e1661-ddc7-4622-9503-6abe87db621a" />
+<img width="1902" height="938" alt="image" src="https://github.com/user-attachments/assets/54cccd48-87be-4e8b-bdaa-8a51cd8d98b1" />
+
 
 ### To Check its Live Working 
 - [Harsh's Portfolio](https://portfolio-hksf.onrender.com)
