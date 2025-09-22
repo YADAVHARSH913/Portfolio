@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh's Portfolio</title>
-     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='%23007bff'%3EH%3C/text%3E%3C/svg%3E">
-    
-    
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='%23007bff'%3EH%3C/text%3E%3C/svg%3E">
+
+
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+
 <body>
-    
+
     <!-- Blend Mode Cursor -->
     <div class="blend-cursor"></div>
 
@@ -23,7 +26,11 @@
         <nav class="navbar container">
             <a href="#" class="nav-logo">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 5V35" stroke="white" stroke-width="4"/><path d="M5 20H20" stroke="white" stroke-width="4"/><path d="M20 5V35" stroke="white" stroke-width="4"/><path d="M25 20L35 5" stroke="#00DDFF" stroke-width="4"/><path d="M25 20L35 35" stroke="#00DDFF" stroke-width="4"/>
+                    <path d="M5 5V35" stroke="white" stroke-width="4" />
+                    <path d="M5 20H20" stroke="white" stroke-width="4" />
+                    <path d="M20 5V35" stroke="white" stroke-width="4" />
+                    <path d="M25 20L35 5" stroke="#00DDFF" stroke-width="4" />
+                    <path d="M25 20L35 35" stroke="#00DDFF" stroke-width="4" />
                 </svg>
             </a>
             <ul class="nav-menu">
@@ -47,109 +54,220 @@
                     <p class="hero-role">I am <span id="typewriter"></span></p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                        <a href="https://drive.google.com/file/d/1ylKrqssuQaIryXbMY00bCJqYI5n8yxJn/view?usp=drive_link"
+                            class="btn btn-primary" target="_blank"><i class="fas fa-file-download"></i> Download
+                            Resume</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://avatars.githubusercontent.com/u/137493393?v=4" alt="Harsh Yadav's Photo">
-                    <div class="glow-circle"></div>
+                    <div class="hero-image-wrapper">
+                        <img src="https://avatars.githubusercontent.com/u/137493393?v=4" alt="Harsh Yadav's Photo">
+                        <div class="glow-circle"></div>
+                        <div class="inner-glow"></div>
+                    </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p>I'm a driven B.Tech Computer Science student from Ghaziabad with a passion for transforming complex problems into elegant web solutions. My focus is on the MERN stack, where I leverage my skills to build scalable, efficient, and user-centric applications. I'm always eager to learn new technologies and apply best practices to create high-performance digital experiences.</p>
-                </div>
+        <!-- About Section (Updated) -->
+<section id="about" class="about">
+    <div class="container about-container">
+        <h2 class="section-title">About Me.</h2>
+        <div class="about-content">
+            
+            <!-- About Image (Ab Left mein) -->
+            <div class="about-image">
+                <img src="./assest/About.jpg" alt="Harsh Yadav">
             </div>
-        </section>
+
+            <!-- About Text (Ab Right mein) -->
+            <div class="about-text">
+                <h3>A Bit About Myself</h3>
+                <p>
+                    Hi, I'm Harsh Yadav, a driven Computer Science student from Ghaziabad. I specialize in the MERN stack, turning complex problems into clean, efficient, and user-friendly web applications. My passion lies in building scalable solutions from the ground up.
+                </p>
+
+                <!-- Key Highlights -->
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-bullseye"></i>
+                        <div>
+                            <h4>Core Focus</h4>
+                            <p>MERN Stack & Web Performance</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <div>
+                            <h4>Beyond Code</h4>
+                            <p>Fitness, Sports & Adventure(Travelling)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://drive.google.com/file/d/1ylKrqssuQaIryXbMY00bCJqYI5n8yxJn/view?usp=drive_link" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills">
-            <div class="container">
-                 <h2 class="section-title">My Skills</h2>
+            <div class="container skills-container">
+                <h2 class="section-title">My Skills</h2>
                 <div class="skills-grid">
-                    <a href="#" class="skill-link" data-skill="React" data-provider="Coursera" data-template="modern">
-                        <div class="skill-card"><i class="fab fa-react"></i><span>React</span></div>
-                    </a>
-                    <a href="#" class="skill-link" data-skill="Node.js" data-provider="Udemy" data-template="modern">
-                        <div class="skill-card"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                    </a>
-                    <a href="#" class="skill-link" data-skill="MongoDB" data-provider="MongoDB University" data-template="modern">
-                        <div class="skill-card"><i class="fas fa-database"></i><span>MongoDB</span></div>
-                    </a>
-                    <a href="#" class="skill-link" data-skill="JavaScript" data-provider="freeCodeCamp" data-template="community">
-                        <div class="skill-card"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-                    </a>
-                    <a href="#" class="skill-link" data-skill="Java" data-provider="Oracle University" data-template="classic">
-                        <div class="skill-card"><i class="fab fa-java"></i><span>Java</span></div>
-                    </a>
-                    <a href="#" class="skill-link" data-skill="C Language" data-provider="NPTEL" data-template="classic">
-                        <div class="skill-card"><i class="fas fa-code"></i><span>C Language</span></div>
-                    </a>
-                    <a href="#" class="skill-link" data-skill="Git & GitHub" data-provider="GitHub Learning Lab" data-template="community">
-                        <div class="skill-card"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
-                    </a>
+                    <div class="skill-card" data-skill="React"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="skill-card" data-skill="Node.js"><i class="fab fa-node-js"></i><span>Node.js</span>
+                    </div>
+                    <div class="skill-card" data-skill="MongoDB"><i class="fas fa-database"></i><span>MongoDB</span>
+                    </div>
+                    <div class="skill-card" data-skill="JavaScript"><i
+                            class="fab fa-js-square"></i><span>JavaScript</span></div>
+                    <div class="skill-card" data-skill="Java"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="skill-card" data-skill="C Language"><i class="fas fa-code"></i><span>C Language</span>
+                    </div>
+                    <div class="skill-card" data-skill="Git & GitHub"><i class="fab fa-git-alt"></i><span>Git &
+                            GitHub</span></div>
                 </div>
             </div>
         </section>
+
 
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="container">
                 <h2 class="section-title">My Creations</h2>
                 <div class="projects-grid">
-                    <div class="project-card" data-tilt>
-                        <img src="./assest/Inventory.jpg" alt="Inventory-IQ Project">
-                        <div class="project-info">
-                            <h3>Inventory-IQ</h3>
-                            <p>Engineered a full-stack inventory management solution with real-time stock tracking and billing features.</p>
-                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/Inventory-IQ" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-tilt>
-                        <img src="./assest/NTPC.jpg" alt="NTPC Complaint Portal Project">
-                        <div class="project-info">
-                            <h3>NTPC Complaint Portal</h3>
-                            <p>Developed a secure MERN stack portal with an Admin approval workflow for efficient complaint resolution.</p>
-                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>Express</span></div>
-                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/NTPC-Complaint-Portal" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
-                        </div>
-                    </div>
+
+                    <!-- AI-Healthcare System -->
                     <div class="project-card" data-tilt>
                         <img src="./assest/AI.jpg" alt="AI Healthcare Project">
                         <div class="project-info">
                             <h3>AI-Healthcare System</h3>
-                            <p>Architected a smart healthcare system for online OPD booking, real-time bed management, and patient analytics.</p>
-                             <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/AI-Healthcare" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                            <p>Smart Healthcare System with online OPD booking, hospital bed management, and medical
+                                inventory tracking.</p>
+                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/AI-Healthcare"
+                                    target="_blank"><i class="fab fa-github"></i> View Code</a></div>
                         </div>
                     </div>
+
+
+
+                    <!-- NTPC Complaint Portal -->
+                    <div class="project-card" data-tilt>
+                        <img src="./assest/NTPC.jpg" alt="NTPC Complaint Portal Project">
+                        <div class="project-info">
+                            <h3>NTPC Complaint Portal</h3>
+                            <p>Developed a secure MERN stack portal with an Admin approval workflow for efficient
+                                complaint resolution.</p>
+                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>Express</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/NTPC-Complaint-Portal"
+                                    target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                        </div>
+                    </div>
+
+
+                    <!-- URL-Shorty -->
+                    <div class="project-card" data-tilt>
+                        <img src="./assest/URL.png" alt="URL Shortener Project">
+                        <div class="project-info">
+                            <h3>URL-Shorty</h3>
+                            <p>A MERN stack URL shortener app with authentication, dashboard, click tracking &
+                                dark/light mode.</p>
+                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/URL-Shorty"
+                                    target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                        </div>
+                    </div>
+
+
+                    <!-- Portfolio -->
                     <div class="project-card" data-tilt>
                         <img src="./assest/Portfolio.jpg" alt="Portfolio Website Project">
                         <div class="project-info">
-                            <h3>Personal Portfolio</h3>
-                            <p>Designed and built a responsive personal portfolio using modern HTML, CSS, and JavaScript to showcase my skills.</p>
-                             <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/Portfolio-Website" target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                            <h3>Portfolio</h3>
+                            <p>Professional portfolio website built with HTML, CSS, and JavaScript to showcase my
+                                skills.</p>
+                            <div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/Portfolio-Website"
+                                    target="_blank"><i class="fab fa-github"></i> View Code</a></div>
                         </div>
                     </div>
+
+                    <!-- Unit Conversion (C Programming) -->
+                    <div class="project-card" data-tilt>
+                        <img src="./assest/Unit_Convertor.jpg" alt="Unit Conversion Project">
+                        <div class="project-info">
+                            <h3>Unit Conversion</h3>
+                            <p>A C language unit converter for quick and accurate conversions between measurement units.
+                            </p>
+                            <div class="tech-stack"><span>C Language</span></div>
+                            <div class="project-links"><a
+                                    href="https://github.com/YADAVHARSH913/Unit-Conversion-Basic-C-programming"
+                                    target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory-IQ -->
+                    <div class="project-card" data-tilt>
+                        <img src="./assest/Inventory.jpg" alt="Inventory-IQ Project">
+                        <div class="project-info">
+                            <h3>Inventory-IQ</h3>
+                            <p>Engineered a full-stack inventory management solution with real-time stock tracking and
+                                billing features.</p>
+                            <div class="tech-stack"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                            <div class="project-links"><a href="https://github.com/YADAVHARSH913/Inventory-IQ"
+                                    target="_blank"><i class="fab fa-github"></i> View Code</a></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
-            <div class="container">
+            <!-- Animated Background Blobs -->
+            <div class="contact-bg">
+                <div class="blob blob1"></div>
+                <div class="blob blob2"></div>
+                <div class="blob blob3"></div>
+            </div>
+
+            <div class="container contact-container">
                 <h2 class="section-title">Let's Build Something Great</h2>
-                <p class="contact-text">Have a project in mind or just want to connect? My inbox is always open.</p>
-                <a href="mailto:yadavharsh913@gmail.com" class="btn btn-primary">Say Hello</a>
+                <p class="contact-text">
+                    Have a project in mind or just want to connect?
+                    My inbox is always open — let's create something amazing together!
+                </p>
+
+                <!-- Contact Cards -->
+                <div class="contact-cards">
+                    <!-- Email Card -->
+                    <a href="mailto:yadavharsh913@gmail.com" class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Me</h3>
+                            <p>yadavharsh913@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://linkedin.com/in/yadavharsh913" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -168,4 +286,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

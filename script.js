@@ -82,16 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
         max: 15, speed: 400, glare: true, "max-glare": 0.5,
     });
 
-    // --- Certificate Link Logic ---
-    const skillLinks = document.querySelectorAll('.skill-link');
-    skillLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const skill = link.dataset.skill;
-            const provider = link.dataset.provider;
-            const template = link.dataset.template; // Naya template parameter
-            const url = `certificate.html?skill=${encodeURIComponent(skill)}&provider=${encodeURIComponent(provider)}&template=${template}`;
-            window.open(url, '_blank');
-        });
-    });
 });
