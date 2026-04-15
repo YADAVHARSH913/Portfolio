@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Typing Animation ---
     const typewriterElement = document.getElementById('typewriter');
-    const roles = ['a Web Developer.', 'a CSE Student.', 'a Tech Enthusiast.'];
+    const roles = ['a Btech Student.', 'a Tech Enthusiast.', ' a Quick Learner'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
